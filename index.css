@@ -1,20 +1,21 @@
-#body{
+#body {
   background-color: #1c2f3e;
   color: #fff;
   transition: 0.5s;
 }
 
-.body-over{
+.body-over {
   background-color: #C60000 !important;
 }
 
-.Mtimer__ttl{
+.Mtimer__ttl {
   font-size: 36px;
   font-weight: 500;
   text-align: center;
   margin: 50px auto;
 }
-.Mtimer__ttl::after{
+
+.Mtimer__ttl::after {
   content: "";
   display: block;
   width: 80px;
@@ -22,7 +23,8 @@
   background-color: #8ac257;
   margin: 10px auto;
 }
-.Mtimer__message{
+
+.Mtimer__message {
   width: 96%;
   max-width: 800px;
   margin: 15px auto;
@@ -32,10 +34,12 @@
   padding: 2%;
   font-size: 12px;
 }
-.Mtimer__message p{
+
+.Mtimer__message p {
   margin: 4px auto;
 }
-.Mtimer__timer_unit{
+
+.Mtimer__timer_unit {
   background-color: #fff;
   color: #333;
   width: 96%;
@@ -45,15 +49,14 @@
   box-sizing: border-box;
 }
 
-.Mtimer__timer_unit-over{
-}
+.Mtimer__timer_unit-over {}
 
-
-.Mtimer__timer_item{
+.Mtimer__timer_item {
   position: relative;
   padding: 15px 10px;
 }
-.Mtimer__timer_item::before{
+
+.Mtimer__timer_item::before {
   content: "";
   display: block;
   height: 1px;
@@ -64,25 +67,31 @@
   right: 1%;
   left: 1%;
 }
-.Mtimer__timer_item:first-of-type::before{
-display: none;
+
+.Mtimer__timer_item:first-of-type::before {
+  display: none;
 }
-.Mtimer__timer_item_name{
+
+.Mtimer__timer_item_name {
   color: #999;
   font-size: 12px;
   width: 100%;
 }
-.Mtimer__timer_item_time{
+
+.Mtimer__timer_item_time {
   font-size: 28px;
   color: #333;
 }
-.Mtimer__timer_item_time-over{
+
+.Mtimer__timer_item_time-over {
   color: #C60000;
 }
-.Mtimer__timer_item_time-over::after{
+
+.Mtimer__timer_item_time-over::after {
   content: "Finish!!";
 }
-.Mtimer__timer-item_btn1{
+
+.Mtimer__timer-item_btn1 {
   position: absolute;
   right: 120px;
   bottom: 10px;
@@ -98,7 +107,8 @@ display: none;
   color: #fff;
   cursor: pointer;
 }
-.Mtimer__timer-item_btn2{
+
+.Mtimer__timer-item_btn2 {
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -110,13 +120,14 @@ display: none;
   justify-content: center;
   font-size: 18px;
   font-weight: 900;
-  border: #999 solid 2px;;
+  border: #999 solid 2px;
+  ;
   box-sizing: border-box;
   color: #999;
   cursor: pointer;
 }
 
-.Mtimer__bonus{
+.Mtimer__bonus {
   background-color: #fff;
   color: #333;
   width: 96%;
@@ -126,14 +137,17 @@ display: none;
   box-sizing: border-box;
   padding: 15px 10px;
 }
-.Mtimer__bonus_ttl{
+
+.Mtimer__bonus_ttl {
   color: #999;
   font-size: 12px;
   margin-bottom: 6px;
 }
-.Mtimer__bonus_txt{
+
+.Mtimer__bonus_txt {
   font-size: 14px;
 }
-.Mtimer__bonus_txt p::before{
+
+.Mtimer__bonus_txt p::before {
   content: "・";
 }
