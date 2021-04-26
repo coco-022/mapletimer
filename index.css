@@ -5,7 +5,7 @@
 }
 
 .body-over {
-  background-color: #C60000 !important;
+  background-color: #c60000 !important;
 }
 
 .Mtimer__ttl {
@@ -49,8 +49,6 @@
   box-sizing: border-box;
 }
 
-.Mtimer__timer_unit-over {}
-
 .Mtimer__timer_item {
   position: relative;
   padding: 15px 10px;
@@ -84,7 +82,7 @@
 }
 
 .Mtimer__timer_item_time-over {
-  color: #C60000;
+  color: #c60000;
 }
 
 .Mtimer__timer_item_time-over::after {
@@ -121,7 +119,6 @@
   font-size: 18px;
   font-weight: 900;
   border: #999 solid 2px;
-  ;
   box-sizing: border-box;
   color: #999;
   cursor: pointer;
