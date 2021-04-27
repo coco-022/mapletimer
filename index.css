@@ -39,6 +39,29 @@
   margin: 4px auto;
 }
 
+.Mtimer__alarm {
+  background-color: #fff;
+  color: #333;
+  width: 96%;
+  max-width: 800px;
+  margin: 15px auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.Mtimer__alarm_checkbox {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+}
+
+.Mtimer__alarm_txt {
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+}
+
 .Mtimer__timer_unit {
   background-color: #fff;
   color: #333;

@@ -1,183 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>狩り用タイマー(仮)</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>狩り用タイマー(仮)</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="index.css">
-</head>
+  <body id="body">
+    <div class="Mtimer">
+      <h1 class="Mtimer__ttl">キッチンタイマー(仮)</h1>
 
-<body id="body">
-  <div class="Mtimer">
-    <h1 class="Mtimer__ttl">
-      キッチンタイマー(仮)
-    </h1>
+      <div class="Mtimer__message">
+        <p>ブラウザで動くキッチンタイマーアプリです。</p>
+        <p>スタートボタンを押すとカウントダウン開始。リセットボタンで元の状態にリセット出来ます。</p>
+        <p>１つでもタイマーのカウントが「00:00:00」になると背景色の変化でお知らせします。</p>
+      </div>
 
-    <div class="Mtimer__message">
-      <p>ブラウザで動くキッチンタイマーアプリです。</p>
-      <p>スタートボタンを押すとカウントダウン開始。リセットボタンで元の状態にリセット出来ます。</p>
-      <p>１つでもタイマーのカウントが「00:00:00」になると背景色の変化でお知らせします。(音声は流れません)</p>
+      <div class="Mtimer__alarm">
+        <audio class="Mtimer__alarm_audio" id="alarm1" preloac loop>
+          <source src="alarm.mp3" type="audio/mp3" />
+        </audio>
+        <label class="Mtimer__alarm_checkbox"><input id="btn-vol" type="checkbox" />アラーム音を出す</label>
+        <p class="Mtimer__alarm_txt">使用した音素材：OtoLogic(https://otologic.jp)</p>
+      </div>
+
+      <div class="Mtimer__timer_unit">
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">サクサクチケット(4h)</div>
+          <div class="Mtimer__timer_item_time" id="time1"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start1()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset1()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">財物獲得の秘薬・経験蓄積の秘薬</div>
+          <div class="Mtimer__timer_item_time" id="time2"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start2()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset2()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">サクサクチケット(1h)</div>
+          <div class="Mtimer__timer_item_time" id="time3"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start3()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset3()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">経験値バフ・エキストリーム(金)</div>
+          <div class="Mtimer__timer_item_time" id="time4"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start4()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset4()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">MVP気象効果</div>
+          <div class="Mtimer__timer_item_time" id="time5"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start5()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset5()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">経験値バフ(20m)</div>
+          <div class="Mtimer__timer_item_time" id="time6"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start6()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset6()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">経験値バフ(15m)</div>
+          <div class="Mtimer__timer_item_time" id="time7"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start7()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset7()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">経験値バフ(10m)</div>
+          <div class="Mtimer__timer_item_time" id="time8"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start8()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset8()">
+            <div>Reset</div>
+          </div>
+        </div>
+
+        <div class="Mtimer__timer_item">
+          <div class="Mtimer__timer_item_name">動作確認テスト用</div>
+          <div class="Mtimer__timer_item_time" id="time9"></div>
+          <div class="Mtimer__timer-item_btn1" onclick="start9()">
+            <div>Start</div>
+          </div>
+          <div class="Mtimer__timer-item_btn2" onclick="reset9()">
+            <div>Reset</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Mtimer__bonus">
+        <div class="Mtimer__bonus_ttl">おまけのチェックリスト</div>
+        <div class="Mtimer__bonus_txt">
+          <p>精霊のペンダントつけ忘れてない？</p>
+          <p>十字旅団の指輪装備した？</p>
+          <p>リンクスキル(アラン,エヴァン,メルセデス)セットした？</p>
+          <p>ユニオン(ゼロ)セットした？</p>
+          <p>ファミリア出した？</p>
+        </div>
+      </div>
     </div>
 
-
-
-    <div class="Mtimer__timer_unit">
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          サクサクチケット(4h)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time1">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start1()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset1()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          財物獲得の秘薬・経験蓄積の秘薬
-        </div>
-        <div class="Mtimer__timer_item_time" id="time2">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start2()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset2()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          サクサクチケット(1h)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time3">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start3()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset3()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          経験値バフ・エキストリーム(金)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time4">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start4()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset4()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          MVP気象効果
-        </div>
-        <div class="Mtimer__timer_item_time" id="time5">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start5()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset5()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          経験値バフ(20m)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time6">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start6()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset6()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          経験値バフ(15m)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time7">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start7()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset7()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          経験値バフ(10m)
-        </div>
-        <div class="Mtimer__timer_item_time" id="time8">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start8()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset8()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-      <div class="Mtimer__timer_item">
-        <div class="Mtimer__timer_item_name">
-          動作確認テスト用
-        </div>
-        <div class="Mtimer__timer_item_time" id="time9">
-        </div>
-        <div class="Mtimer__timer-item_btn1" onclick="start9()">
-          <div>Start</div>
-        </div>
-        <div class="Mtimer__timer-item_btn2" onclick="reset9()">
-          <div>Reset</div>
-        </div>
-      </div>
-
-
-
-
-    </div>
-
-
-
-    <div class="Mtimer__bonus">
-      <div class="Mtimer__bonus_ttl">
-        おまけのチェックリスト
-      </div>
-      <div class="Mtimer__bonus_txt">
-        <p>精霊のペンダントつけ忘れてない？</p>
-        <p>十字旅団の指輪装備した？</p>
-        <p>リンクスキル(アラン,エヴァン,メルセデス)セットした？</p>
-        <p>ユニオン(ゼロ)セットした？</p>
-        <p>ファミリア出した？</p>
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-
-  <script src="index.js" type="text/javascript"></script>
-</body>
-
+    <script src="index.js" type="text/javascript"></script>
+  </body>
 </html>

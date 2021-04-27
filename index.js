@@ -48,17 +48,16 @@ var intervalId9;
 //-----------------------------------------------------//
 //　初期化設定
 //-----------------------------------------------------//
-window.onload = function() {
-
-  time1 = document.getElementById('time1');
-  time2 = document.getElementById('time2');
-  time3 = document.getElementById('time3');
-  time4 = document.getElementById('time4');
-  time5 = document.getElementById('time5');
-  time6 = document.getElementById('time6');
-  time7 = document.getElementById('time7');
-  time8 = document.getElementById('time8');
-  time9 = document.getElementById('time9');
+window.onload = function () {
+  time1 = document.getElementById("time1");
+  time2 = document.getElementById("time2");
+  time3 = document.getElementById("time3");
+  time4 = document.getElementById("time4");
+  time5 = document.getElementById("time5");
+  time6 = document.getElementById("time6");
+  time7 = document.getElementById("time7");
+  time8 = document.getElementById("time8");
+  time9 = document.getElementById("time9");
 
   clock1 = clock(num1);
   clock2 = clock(num2);
@@ -79,17 +78,16 @@ window.onload = function() {
   time7.innerHTML = clock7;
   time8.innerHTML = clock8;
   time9.innerHTML = clock9;
-
 };
 
 //-----------------------------------------------------//
 //　ボタン1
 //-----------------------------------------------------//
 function start1() {
-  if ((intervalId1 == null) && (num1 != 0)) {
-    intervalId1 = setInterval(function() {
+  if (intervalId1 == null && num1 != 0) {
+    intervalId1 = setInterval(function () {
       num1--;
-      checkTimer()
+      checkTimer();
       clock1 = clock(num1);
       time1.innerHTML = clock1;
       if (num1 <= 0) {
@@ -102,7 +100,7 @@ function start1() {
 
 function reset1() {
   num1 = 14400;
-  checkTimer()
+  checkTimer();
   clock1 = clock(num1);
   time1.innerHTML = clock1;
   clearInterval(intervalId1);
@@ -113,10 +111,10 @@ function reset1() {
 //　ボタン2
 //-----------------------------------------------------//
 function start2() {
-  if ((intervalId2 == null) && (num2 != 0)) {
-    intervalId2 = setInterval(function() {
+  if (intervalId2 == null && num2 != 0) {
+    intervalId2 = setInterval(function () {
       num2--;
-      checkTimer()
+      checkTimer();
       clock2 = clock(num2);
       time2.innerHTML = clock2;
       if (num2 <= 0) {
@@ -129,7 +127,7 @@ function start2() {
 
 function reset2() {
   num2 = 7200;
-  checkTimer()
+  checkTimer();
   clock2 = clock(num2);
   time2.innerHTML = clock2;
   clearInterval(intervalId2);
@@ -140,10 +138,10 @@ function reset2() {
 //　ボタン3
 //-----------------------------------------------------//
 function start3() {
-  if ((intervalId3 == null) && (num3 != 0)) {
-    intervalId3 = setInterval(function() {
+  if (intervalId3 == null && num3 != 0) {
+    intervalId3 = setInterval(function () {
       num3--;
-      checkTimer()
+      checkTimer();
       clock3 = clock(num3);
       time3.innerHTML = clock3;
       if (num3 <= 0) {
@@ -156,7 +154,7 @@ function start3() {
 
 function reset3() {
   num3 = 3600;
-  checkTimer()
+  checkTimer();
   clock3 = clock(num3);
   time3.innerHTML = clock3;
   clearInterval(intervalId3);
@@ -167,10 +165,10 @@ function reset3() {
 //　ボタン4
 //-----------------------------------------------------//
 function start4() {
-  if ((intervalId4 == null) && (num4 != 0)) {
-    intervalId4 = setInterval(function() {
+  if (intervalId4 == null && num4 != 0) {
+    intervalId4 = setInterval(function () {
       num4--;
-      checkTimer()
+      checkTimer();
       clock4 = clock(num4);
       time4.innerHTML = clock4;
       if (num4 <= 0) {
@@ -183,7 +181,7 @@ function start4() {
 
 function reset4() {
   num4 = 1800;
-  checkTimer()
+  checkTimer();
   clock4 = clock(num4);
   time4.innerHTML = clock4;
   clearInterval(intervalId4);
@@ -194,10 +192,10 @@ function reset4() {
 //　ボタン5
 //-----------------------------------------------------//
 function start5() {
-  if ((intervalId5 == null) && (num5 != 0)) {
-    intervalId5 = setInterval(function() {
+  if (intervalId5 == null && num5 != 0) {
+    intervalId5 = setInterval(function () {
       num5--;
-      checkTimer()
+      checkTimer();
       clock5 = clock(num5);
       time5.innerHTML = clock5;
       if (num5 <= 0) {
@@ -210,7 +208,7 @@ function start5() {
 
 function reset5() {
   num5 = 1800;
-  checkTimer()
+  checkTimer();
   clock5 = clock(num5);
   time5.innerHTML = clock5;
   clearInterval(intervalId5);
@@ -221,10 +219,10 @@ function reset5() {
 //　ボタン6
 //-----------------------------------------------------//
 function start6() {
-  if ((intervalId6 == null) && (num6 != 0)) {
-    intervalId6 = setInterval(function() {
+  if (intervalId6 == null && num6 != 0) {
+    intervalId6 = setInterval(function () {
       num6--;
-      checkTimer()
+      checkTimer();
       clock6 = clock(num6);
       time6.innerHTML = clock6;
       if (num6 <= 0) {
@@ -237,7 +235,7 @@ function start6() {
 
 function reset6() {
   num6 = 1200;
-  checkTimer()
+  checkTimer();
   clock6 = clock(num6);
   time6.innerHTML = clock6;
   clearInterval(intervalId6);
@@ -248,10 +246,10 @@ function reset6() {
 //　ボタン7
 //-----------------------------------------------------//
 function start7() {
-  if ((intervalId7 == null) && (num7 != 0)) {
-    intervalId7 = setInterval(function() {
+  if (intervalId7 == null && num7 != 0) {
+    intervalId7 = setInterval(function () {
       num7--;
-      checkTimer()
+      checkTimer();
       clock7 = clock(num7);
       time7.innerHTML = clock7;
       if (num7 <= 0) {
@@ -264,7 +262,7 @@ function start7() {
 
 function reset7() {
   num7 = 900;
-  checkTimer()
+  checkTimer();
   clock7 = clock(num7);
   time7.innerHTML = clock7;
   clearInterval(intervalId7);
@@ -275,10 +273,10 @@ function reset7() {
 //　ボタン8
 //-----------------------------------------------------//
 function start8() {
-  if ((intervalId8 == null) && (num8 != 0)) {
-    intervalId8 = setInterval(function() {
+  if (intervalId8 == null && num8 != 0) {
+    intervalId8 = setInterval(function () {
       num8--;
-      checkTimer()
+      checkTimer();
       clock8 = clock(num8);
       time8.innerHTML = clock8;
       if (num8 <= 0) {
@@ -291,7 +289,7 @@ function start8() {
 
 function reset8() {
   num8 = 600;
-  checkTimer()
+  checkTimer();
   clock8 = clock(num8);
   time8.innerHTML = clock8;
   clearInterval(intervalId8);
@@ -302,10 +300,10 @@ function reset8() {
 //　ボタン9
 //-----------------------------------------------------//
 function start9() {
-  if ((intervalId9 == null) && (num9 != 0)) {
-    intervalId9 = setInterval(function() {
+  if (intervalId9 == null && num9 != 0) {
+    intervalId9 = setInterval(function () {
       num9--;
-      checkTimer()
+      checkTimer();
       clock9 = clock(num9);
       time9.innerHTML = clock9;
       if (num9 <= 0) {
@@ -318,7 +316,7 @@ function start9() {
 
 function reset9() {
   num9 = 5;
-  checkTimer()
+  checkTimer();
   clock9 = clock(num9);
   time9.innerHTML = clock9;
   clearInterval(intervalId9);
@@ -333,9 +331,12 @@ function checkTimer() {
   console.log(checkCount);
 
   if (checkCount == 0) {
-    document.getElementById('body').classList.add('body-over');
+    document.getElementById("body").classList.add("body-over");
+    alarm1.play();
   } else {
-    document.getElementById('body').classList.remove('body-over');
+    document.getElementById("body").classList.remove("body-over");
+    alarm1.pause();
+    alarm1.currentTime = 0;
   }
 }
 
@@ -343,9 +344,9 @@ function checkTimer() {
 //　数字を時計表記に変える
 //-----------------------------------------------------//
 function clock(x) {
-  var hour = Math.floor(x % (24 * 60 * 60) / (60 * 60));
-  var min = Math.floor(x % (24 * 60 * 60) % (60 * 60) / 60);
-  var sec = x % (24 * 60 * 60) % (60 * 60) % 60;
+  var hour = Math.floor((x % (24 * 60 * 60)) / (60 * 60));
+  var min = Math.floor(((x % (24 * 60 * 60)) % (60 * 60)) / 60);
+  var sec = ((x % (24 * 60 * 60)) % (60 * 60)) % 60;
   hour = addZero(hour);
   min = addZero(min);
   sec = addZero(sec);
@@ -357,9 +358,26 @@ function clock(x) {
 //　数字が一桁の時、0を付け加える
 //-----------------------------------------------------//
 function addZero(value) {
-
   if (value < 10) {
-    value = '0' + value;
+    value = "0" + value;
   }
   return value;
 }
+
+//-----------------------------------------------------//
+//    アラーム機能
+//-----------------------------------------------------//
+const alarm1 = document.querySelector("#alarm1");
+const btnVol = document.querySelector("#btn-vol");
+alarm1.muted = true;
+btnVol.addEventListener(
+  "change",
+  function () {
+    if (btnVol.checked) {
+      alarm1.muted = false;
+    } else {
+      alarm1.muted = true;
+    }
+  },
+  false
+);
