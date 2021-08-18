@@ -387,5 +387,5 @@ btnVol.addEventListener(
 //-----------------------------------------------------//
 
 function memoOpen(){
-  window.open('[https://coco-022.github.io/simple_memo/','subwin','width=400,height=250](https://coco-022.github.io/simple_memo/','subwin','width=400,height=250)');
+  window.open('https://coco-022.github.io/simple_memo/','subwin','width=400,height=250');
 }
